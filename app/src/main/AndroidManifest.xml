@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- ==================== PERMISSIONS ==================== -->
+
+    <!-- Internet / Spring Boot backend / Web search -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Voice recognition -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <!-- Camera -->
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- Read contacts -->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <!-- Direct phone calls -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+
+    <!-- ==================== OPTIONAL HARDWARE ==================== -->
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+
+
+    <!-- ==================== APP VISIBILITY ==================== -->
+    <!-- Required for Android 11+ when checking installed apps -->
+
+    <queries>
+
+        <!-- YouTube -->
+        <package android:name="com.google.android.youtube" />
+
+        <!-- Spotify -->
+        <package android:name="com.spotify.music" />
+
+        <!-- Instagram -->
+        <package android:name="com.instagram.android" />
+
+        <!-- WhatsApp -->
+        <package android:name="com.whatsapp" />
+
+        <!-- WhatsApp Business -->
+        <package android:name="com.whatsapp.w4b" />
+
+        <!-- Chrome -->
+        <package android:name="com.android.chrome" />
+
+        <!-- Google Maps -->
+        <package android:name="com.google.android.apps.maps" />
+
+        <!-- Calculator -->
+        <package android:name="com.google.android.calculator" />
+        <package android:name="com.android.calculator2" />
+        <package android:name="com.sec.android.app.popupcalculator" />
+
+    </queries>
+
+
+    <!-- ==================== APPLICATION ==================== -->
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.JarvisController"
+        android:usesCleartextTraffic="true"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <!-- Main Activity -->
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+
+            <intent-filter>
+
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+
+        </activity>
+
+    </application>
+
+</manifest>
